@@ -3,8 +3,9 @@ function carouBuilder(e){
 		slides = e.children,
 		currentSlide = 0;
 	//if caroucontainer has slideint data attribute adjust slideTiming to that value
-	(e.getAttribute('data-slideint'))
+	if(e.getAttribute('data-slideint')){
 		slideTiming = e.getAttribute('data-slideint');
+	}
 	e.classList.add('caroucontainer');
 	e.children[0].classList.add('active');
 	if(slides.length > 1){

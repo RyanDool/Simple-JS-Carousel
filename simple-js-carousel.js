@@ -5,7 +5,7 @@ function carouBuilder(e){
 	//if caroucontainer has slideint data attribute adjust slideTiming to that value
 	(e.getAttribute('data-slideint'))
 		slideTiming = e.getAttribute('data-slideint');
-	e.classList.add('slidercontainer');
+	e.classList.add('caroucontainer');
 	e.children[0].classList.add('active');
 	if(slides.length > 1){
 		const slideInterval = setInterval(nextSlide,slideTiming);
@@ -17,6 +17,6 @@ function carouBuilder(e){
 		slides[currentSlide].classList.add('active');
 	}
 }
-//Selects all DOM Elements with slidecont data attribute
-const allslides = document.querySelectorAll('[data-slidecont]');
-allslides.forEach(slider => carouBuilder(slider));
+//Selects all DOM Elements with carou data attribute
+const allcarous = document.querySelectorAll('[data-carou]');
+allcarous.forEach(carou => carouBuilder(carou));
